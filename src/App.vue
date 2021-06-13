@@ -1,17 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>{{ count }}</h1>
+    <button @click="count += 1">click add count</button>
+    <title-slot>
+      <template #default>
+        this is second title（by slot）
+      </template>
+    </title-slot>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TitleSlot from "./components/title-slot.vue"
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TitleSlot
+  },
+  data() {
+    return {
+      count: 0
+    }
   }
 }
 </script>
