@@ -3,9 +3,7 @@
     <h1>{{ count }}</h1>
     <button @click="count += 1">click add count</button>
     <title-slot>
-      <template #default>
         this is second title（by slot）
-      </template>
     </title-slot>
   </div>
 </template>
