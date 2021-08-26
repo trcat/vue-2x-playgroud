@@ -1,30 +1,17 @@
 <template>
   <div id="app">
-    <h1>{{ count }}</h1>
-    <button @click="count += 1">click add count</button>
-    <title-slot>
-        this is second title（by slot）
-    </title-slot>
+    <c-input></c-input>
   </div>
 </template>
 
 <script>
-import TitleSlot from "./components/title-slot.vue"
-import { transformToPinYin } from '@mdfe/common/dist/index.common'
+import Input from './components/input.vue'
 
 export default {
   name: 'App',
   components: {
-    TitleSlot
-  },
-  data() {
-    return {
-      count: 0
-    }
-  },
-  mounted() {
-    console.log(transformToPinYin('测试字符串'))
-  },
+    'c-input': Input
+  }
 }
 </script>
 
