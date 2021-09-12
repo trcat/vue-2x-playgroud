@@ -10,7 +10,6 @@
 
 <script>
 import TitleSlot from "./components/title-slot.vue"
-import { transformToPinYin } from '@mdfe/common/dist/index.common'
 
 export default {
   name: 'App',
@@ -21,9 +20,6 @@ export default {
     return {
       count: 0
     }
-  },
-  mounted() {
-    console.log(transformToPinYin('测试字符串'))
   },
 }
 </script>
